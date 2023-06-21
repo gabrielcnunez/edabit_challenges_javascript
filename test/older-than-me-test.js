@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var compareAge = require('../challenges/older-than-me');
+var Person = require('../challenges/older-than-me');
 
 describe('compareAge', function() {
 
