@@ -15,7 +15,7 @@
 // Expect any positive number between 1 and 1000.
 
 function addUP(num) {
-  
+  return (num ** 2 + num) / 2
 }
 
 module.exports = addUP
