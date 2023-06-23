@@ -1,4 +1,4 @@
-var assert = require('chai').assert;
+var expect = require('chai').expect;
 var sortDrinkByPrice = require('../challenges/drink-sorting');
 
 describe('sortDrinkByPrice', function() {
@@ -27,7 +27,7 @@ describe('sortDrinkByPrice', function() {
       {name: 'peach', price: 90}, 
       {name: 'water', price: 120}
     ];
-    assert.equal(sortDrinkByPrice(drinks1), sorted1, "Object is not sorted.");
-    assert.equal(sortDrinkByPrice(drinks2), sorted2, "Object is not sorted.");
+    expect(sortDrinkByPrice(drinks1)).to.deep.equal(sorted1, "Object is not sorted.");
+    expect(sortDrinkByPrice(drinks2)).to.deep.equal(sorted2, "Object is not sorted.");
   });
 });
