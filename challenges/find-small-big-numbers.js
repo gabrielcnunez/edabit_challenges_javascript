@@ -13,10 +13,20 @@
 // All test arrays will have at least one element and are valid.
 
 function minMax(arr) {
-  var results = [];
-  results.push(arr.reduce((a, b) => Math.min(a, b), Infinity));
-  results.push(arr.reduce((a, b) => Math.max(a, b), -Infinity));
-  return results
+  let min = arr[0];
+  let max = arr[0];
+  
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+    
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  
+  return [min, max];
 }
 
 module.exports = minMax;
