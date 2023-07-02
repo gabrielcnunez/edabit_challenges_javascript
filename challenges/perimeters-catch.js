@@ -29,7 +29,7 @@
 // No rounding is needed.
 
 function perimeter(l, num) {
-  return (l == 's' ? num * 4 : num * 6.28)
+  return l == 's' ? num * 4 : num * 6.28;
 }
 
 module.exports = perimeter
