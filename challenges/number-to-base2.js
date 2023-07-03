@@ -24,7 +24,7 @@
 // If a binary conversion for 0 is attempted, return "0".
 
 function binary(decimal) {
-  
+  return decimal.toString(2)
 }
 
 module.exports = binary;
