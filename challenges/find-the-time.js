@@ -7,7 +7,7 @@
 // The solution is in the Resources tab.
 
 function regExp(str) {
-
+  return str.match(/\b\d\d:\d\d\b/)
 }
 
 module.exports = regExp;
