@@ -16,14 +16,7 @@
 // This isn't really a coding challenge, more of a fun riddle ;)
 
 function mubashirFunction(a,b) {
-  if (a < 10 && b < 10) {
-    return a * b;
-  } else {
-    var aString = a.toString().replaceAll(/0/g, '');
-    var bString = b.toString().replaceAll(/0/g, '');
-    
-    return parseInt(aString) * parseInt(bString);
-  }
+  return (a < 10 && b < 10) ? a * b : parseInt(a.toString().replace(/0/g, '')) * parseInt(b.toString().replace(/0/g, ''));
 }
 
 module.exports = mubashirFunction;
