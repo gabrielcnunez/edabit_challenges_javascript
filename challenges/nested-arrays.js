@@ -29,22 +29,17 @@ function canNest(arr1, arr2) {
 }
 
 function findMin(arr) {
-  var min = arr[0];
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] < min) {
-      min = arr[i];
-    }
-  }
-  return min;
+  var min = arr.sort(function(a,b) {
+    return a-b;
+  })
+  return min[0];
 }
+
 function findMax(arr) {
-  var max = arr[0];
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
-    }
-  }
-  return max;
+  var max = arr.sort(function(a,b) {
+    return b-a;
+  })
+  return max[0];
 }
 
 module.exports = canNest;
