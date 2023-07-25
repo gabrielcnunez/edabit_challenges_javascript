@@ -29,16 +29,12 @@ function canNest(arr1, arr2) {
 }
 
 function findMin(arr) {
-  var min = arr.sort(function(a,b) {
-    return a-b;
-  })
+  var min = arr.sort((a,b) => a-b);
   return min[0];
 }
 
 function findMax(arr) {
-  var max = arr.sort(function(a,b) {
-    return b-a;
-  })
+  var max = arr.sort((a,b) => b-a)
   return max[0];
 }
 
