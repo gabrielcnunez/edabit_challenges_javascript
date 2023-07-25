@@ -20,7 +20,31 @@
 // Note the strict inequality (see example #3).
 
 function canNest(arr1, arr2) {
+  const minArr1 = findMin(arr1);
+  const minArr2 = findMin(arr2);
+  const maxArr1 = findMax(arr1);
+  const maxArr2 = findMax(arr2);
 
+  return minArr1 > minArr2 && maxArr1 < maxArr2;
+}
+
+function findMin(arr) {
+  var min = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  return min;
+}
+function findMax(arr) {
+  var max = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return max;
 }
 
 module.exports = canNest;
