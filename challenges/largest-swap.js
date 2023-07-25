@@ -22,7 +22,7 @@
 // Numbers with two identical digits (third example) should yield true (you can't do better).
 
 function largestSwap(num) {
-
+  return num.toString()[0] < num.toString()[1] ? false : true
 }
 
 module.exports = largestSwap;
