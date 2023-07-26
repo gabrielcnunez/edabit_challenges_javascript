@@ -14,7 +14,7 @@
 // Use the spread syntax to solve this challenge.
 
 function tuckIn(arr1, arr2) {
-
+  
 }
 
 module.exports = tuckIn;
