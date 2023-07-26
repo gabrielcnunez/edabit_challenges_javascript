@@ -12,7 +12,7 @@
 // N/A
 
 function potatoes(str) {
-
+  return (str.match(/potato/g)).length;
 }
 
 module.exports = potatoes
