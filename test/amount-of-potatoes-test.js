@@ -10,5 +10,6 @@ describe('Amount of potatoes', function() {
     assert.equal(potatoes("potatopotatobananapotatopotato"), 4)
     assert.equal(potatoes("potatopotatomangopotatopotatopotato"), 5)
     assert.equal(potatoes("potatocucumberpotatopotatopotatopotatopotato"), 6)
+    assert.equal(potatoes("tomato"), 0)
   })
 })
