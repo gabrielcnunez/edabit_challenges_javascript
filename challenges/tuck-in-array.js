@@ -14,8 +14,7 @@
 // Use the spread syntax to solve this challenge.
 
 function tuckIn(arr1, arr2) {
-  const tuckedArray = [arr1[0], ...arr2, arr1[1]];
-  return tuckedArray;
+  return [arr1[0], ...arr2, arr1[1]];
 }
 
 module.exports = tuckIn;
