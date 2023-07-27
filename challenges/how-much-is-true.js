@@ -14,7 +14,15 @@
 // All array items are of the type bool (true or false).
 
 function countTrue(arr) {
+  let numberOfTrues = 0;
 
+  for (const element of arr) {
+    if (element === true) {
+      numberOfTrues += 1
+    }
+  }
+
+  return numberOfTrues;
 }
 
 module.exports = countTrue;
