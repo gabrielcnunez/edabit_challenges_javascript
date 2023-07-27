@@ -29,8 +29,12 @@
 function battingAverage(arr) {
   let hits = 0;
   let atBats = 0;
-  arr.forEach(element => hits += element[0]);
-  arr.forEach(element => atBats += element[1]);
+
+  for (const game of arr) {
+    hits += game[0]; 
+    atBats += game[1];
+  }
+
   return (hits / atBats).toFixed(3).toString().slice(1)
 }
 
