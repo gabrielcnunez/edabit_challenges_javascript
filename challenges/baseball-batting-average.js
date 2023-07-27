@@ -27,7 +27,11 @@
 // HINT: Think in terms of total hits and total at-bats.
 
 function battingAverage(arr) {
-  
+  let hits = 0;
+  let atBats = 0;
+  arr.forEach(element => hits += element[0]);
+  arr.forEach(element => atBats += element[1]);
+  return (hits / atBats).toFixed(3).toString().slice(1)
 }
 
 module.exports = battingAverage;
