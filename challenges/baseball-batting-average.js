@@ -35,7 +35,7 @@ function battingAverage(arr) {
     atBats += game[1];
   }
 
-  return (hits / atBats).toFixed(3).toString().slice(1)
+  return (hits / atBats).toFixed(3).toString().slice(1);
 }
 
 module.exports = battingAverage;
