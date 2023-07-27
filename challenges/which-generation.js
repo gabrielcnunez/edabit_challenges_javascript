@@ -28,19 +28,21 @@
 
 function generation(x, y) {
   const person = ageAndGenderFinder(x, y);
-  switch(Math.abs(x)) {
-    case 1:
+
+  switch(true) {
+    case Math.abs(x) === 1:
       return person;
-    case 2:
+    case Math.abs(x) === 2:
       return `grand${person}`;
-    case 3:
+    case Math.abs(x) === 3:
       return `great grand${person}`;
+    case Math.abs(x) > 3:
+      return "great ".repeat(Math.abs(x) - 2) + `grand${person}`;
     default:
       return 'me!';
   }
 
 } 
-
 
 function ageAndGenderFinder(age, gender) {
   return age > 0 && gender === "m" ? "son"

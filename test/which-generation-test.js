@@ -19,5 +19,7 @@ describe('Which Generation Are You?', function() {
     assert.equal(generation(3, "m"), "great grandson");
     assert.equal(generation(3, "f"), "great granddaughter");
     assert.equal(generation(0, "m"), "me!");
+    assert.equal(generation(4, "m"), "great great grandson");
+    assert.equal(generation(6, "f"), "great great great great granddaughter");
   });
 });
