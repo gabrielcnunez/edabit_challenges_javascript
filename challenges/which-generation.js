@@ -27,7 +27,26 @@
 // 3	great grandson	great granddaughter
 
 function generation(x, y) {
+  const person = ageAndGenderFinder(x, y);
+  switch(Math.abs(x)) {
+    case 1:
+      return person;
+    case 2:
+      return `grand${person}`;
+    case 3:
+      return `great grand${person}`;
+    default:
+      return 'me!';
+  }
 
+} 
+
+
+function ageAndGenderFinder(age, gender) {
+  return age > 0 && gender === "m" ? "son"
+    : age > 0 && gender === "f" ? "daughter"
+    : age < 0 && gender === "m" ? "father"
+    : "mother";
 }
 
 module.exports = generation;
