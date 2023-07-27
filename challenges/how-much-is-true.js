@@ -18,7 +18,7 @@ function countTrue(arr) {
 
   for (const element of arr) {
     if (element === true) {
-      numberOfTrues += 1
+      numberOfTrues++;
     }
   }
 
