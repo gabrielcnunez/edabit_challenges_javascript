@@ -16,7 +16,7 @@
 // There is a formula for the nth tetrahedral number.
 
 function tetra(n) {
-
+  return (n * (n + 1) * (n + 2)) / 6
 }
 
 module.exports = tetra
