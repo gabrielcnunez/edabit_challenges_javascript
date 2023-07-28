@@ -16,9 +16,12 @@
 // The original order must be maintained.
 
 function filterArray(arr) {
-  let filtered_array = arr.filter(function (e) {
-    return typeof e !== 'string';
-  });
+  // let filtered_array = arr.filter(function (e) {
+  //   return typeof e !== 'string';
+  // });
+
+  // return filtered_array
+  const filtered_array = arr.filter((e) => typeof e !== 'string');
 
   return filtered_array
 }
