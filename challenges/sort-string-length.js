@@ -17,7 +17,7 @@
 // Return an empty array if the input array is empty (see example #4).
 
 function sortByLength(arr) {
-
+  return arr.sort((a, b) => a.length - b.length)
 }
 
 module.exports = sortByLength
