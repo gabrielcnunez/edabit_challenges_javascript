@@ -14,7 +14,9 @@
 // All test cases are one word and only contain letters.
 
 function countVowels(str) {
+  let vowelCount = str.match(/[aeiou]/g)
 
+  return vowelCount.length;
 }
 
 module.exports = countVowels
