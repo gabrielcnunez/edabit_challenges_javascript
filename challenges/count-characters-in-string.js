@@ -13,7 +13,15 @@
 // Your output must be case-sensitive (see second example).
 
 function charCount(char, str) {
+  let totalCount = 0;
 
+  for (const element of str.split('')) {
+    if (element === char) {
+      totalCount++;
+    }
+  }
+
+  return totalCount;
 }
 
 module.exports = charCount;
