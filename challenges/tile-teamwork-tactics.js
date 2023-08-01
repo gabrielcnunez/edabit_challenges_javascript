@@ -20,7 +20,7 @@
 // Expect only positive integer inputs.
 
 function possibleBonus(a, b) {
-  
+  return b <= a || b - a > 6 ? false : true
 }
 
 module.exports = possibleBonus;
