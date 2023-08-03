@@ -15,7 +15,7 @@
 // Bounds will be always given as integers.
 
 function intWithinBounds(n, lower, upper) {
-  return Number.isInteger(n) && lower <= n && n < upper ? true : false
+  return Number.isInteger(n) && lower <= n && n < upper;
 }
 
 module.exports = intWithinBounds
