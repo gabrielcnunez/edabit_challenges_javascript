@@ -16,11 +16,7 @@
 // If given an empty array, return 0.
 
 function sumOfCubes(arr) {
-  let cubeArray = 0
-  for (element of arr) {
-    cubeArray = cubeArray + (element * element * element)
-  }
-  return cubeArray
+  return arr.reduce((sum, element) => sum + (element ** 3), 0);
 }
 
-module.exports = sumOfCubes
+module.exports = sumOfCubes;
