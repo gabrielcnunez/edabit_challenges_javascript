@@ -17,7 +17,7 @@
 // All the elements in the given array are integers.
 
 function getAbsSum(arr) {
-
+  return arr.reduce((sum, element) => sum + Math.abs(element), 0);
 }
 
-module.exports = getAbsSum
+module.exports = getAbsSum;
