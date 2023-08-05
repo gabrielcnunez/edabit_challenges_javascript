@@ -17,10 +17,10 @@
 // Remember to sort the keys.
 
 function keysAndValues(obj) {
-  let keys = Object.keys(obj);
-  let values = Object.values(obj);
+  const keys = Object.keys(obj).sort();
+  const values = keys.map(key => obj[key]);
 
   return [keys, values];
 }
 
-module.exports = keysAndValues
+module.exports = keysAndValues;
