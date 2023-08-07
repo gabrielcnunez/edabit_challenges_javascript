@@ -18,7 +18,9 @@
 // The elements must be exactly identical for there to be a jackpot.
 
 function testJackpot(arr) {
-
+  const jackpotElement = (currentValue) => currentValue === arr[0];
+  
+  return arr.every(jackpotElement);
 }
 
 module.exports = testJackpot;
