@@ -15,7 +15,13 @@
 // Try to solve this challenge without using strings!
 
 function numOfDigits(num) {
+  const absoluteNum = Math.abs(num);
 
+  if (absoluteNum === 0) {
+    return 1;
+  }
+
+  return Math.floor(Math.log10(absoluteNum)) + 1;
 }
 
-module.exports = numOfDigits
+module.exports = numOfDigits;
