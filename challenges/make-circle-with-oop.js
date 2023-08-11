@@ -20,8 +20,8 @@ class Circle {
   constructor(radius) {
     this.radius = radius
   }
-  getArea(){}
-  getPerimeter(){}
+  getArea(){return this.radius ** 2 * Math.PI}
+  getPerimeter(){return this.radius * 2 * Math.PI}
 }
 
 module.exports = Circle
