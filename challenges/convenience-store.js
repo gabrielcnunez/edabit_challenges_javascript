@@ -1,5 +1,5 @@
 // Convenience Store
-// Given a total due and an array representing the amount of change in your pocket, 
+// Given a total due and an changeay representing the amount of change in your pocket, 
 // determine whether or not you are able to pay for the item. Change will always be 
 // represented in the following order: quarters, dimes, nickels, pennies.
 
@@ -23,8 +23,10 @@
 // nickel: 5 cents / $0.05
 // penny: 1 cent / $0.01
 
-function changeEnough(arr, total) {
-  return arr[0] * .25 + arr[1] * .1 + arr[2] * .05 + arr[3] * .01 >= total ? true : false;
+function changeEnough(change, amountDue) {
+  const totalChange = change[0] * .25 + change[1] * .1 + change[2] * .05 + change[3] * .01;
+
+  return totalChange >= amountDue;
 }
 
 module.exports = changeEnough
