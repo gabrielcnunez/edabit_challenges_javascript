@@ -24,11 +24,7 @@
 // penny: 1 cent / $0.01
 
 function changeEnough(arr, total) {
-  if ((arr[0] * .25 + arr[1] * .1 + arr[2] * .05 + arr[3] * .01) >= total) {
-    return true;
-  } else {
-    return false;
-  }
+  return arr[0] * .25 + arr[1] * .1 + arr[2] * .05 + arr[3] * .01 >= total ? true : false;
 }
 
 module.exports = changeEnough
