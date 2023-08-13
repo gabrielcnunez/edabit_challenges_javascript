@@ -20,7 +20,7 @@
 // Round down to 0 if a population is below 500,000.
 
 function millionsRounding(arr) {
-
+  return arr.map(([c, p]) => [c, Math.round(p / 1000000) * 1000000])
 }
 
 module.exports = millionsRounding
