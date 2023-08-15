@@ -13,8 +13,8 @@
 // Notes
 // Arrays should be concatenated in order of the arguments.
 
-function concat(n) {
-
+function concat(...args) {
+  return args.flat();
 }
 
 module.exports = concat;
