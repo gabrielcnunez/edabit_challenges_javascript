@@ -12,7 +12,10 @@
 // Keep the original relative order of the upper and lower case letters the same.
 
 function capToFront(word) {
+  const caps = [...word.matchAll(/[A-Z]/g)].join('');
+  const unCaps = [...word.matchAll(/[a-z]/g)].join('');
 
+  return caps + unCaps
 }
 
 module.exports = capToFront
