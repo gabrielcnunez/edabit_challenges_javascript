@@ -18,7 +18,10 @@
 // If there are multiple Nemo's in the sentence, only return the first one.
 
 function findNemo(str) {
+  const wordArray = str.split(' ');
+  const nemoIndex = wordArray.findIndex(element => element === 'Nemo');
 
+  return nemoIndex !== -1 ? `I found Nemo at ${nemoIndex + 1}!` : "I can't find Nemo :("
 }
 
 module.exports = findNemo;
