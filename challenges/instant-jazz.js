@@ -16,7 +16,13 @@
 // You can expect all the tests to have valid chords.
 
 function jazzify(arr) {
-
+  return arr.map((c) => {
+    if (!c.includes('7')) {
+      return c + '7'
+    } else {
+      return c
+    }
+  })
 }
 
 module.exports = jazzify;
