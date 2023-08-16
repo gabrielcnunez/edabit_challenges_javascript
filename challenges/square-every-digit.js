@@ -12,7 +12,7 @@
 // The function receives an integer and must return an integer.
 
 function squareDigits(num) {
-  return Number(Array.from(String(num), Number).map(n => n ** 2).join(''))
+  return parseInt(Array.from(String(num), n => n ** 2).join(''));
 }
 
 module.exports = squareDigits;
