@@ -24,7 +24,15 @@
 // There will be no punctuation in each sentence.
 
 function isSmooth(sentence) {
-  
+  const words = sentence.toLowerCase().split(' ');
+
+  for (let i = 0; i < words.length - 1; i++) {
+    if (words[i].charAt(words[i].length - 1) !== words[i + 1].charAt(0)) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 module.exports = isSmooth;
