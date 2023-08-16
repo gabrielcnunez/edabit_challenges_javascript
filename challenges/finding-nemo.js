@@ -19,7 +19,7 @@
 
 function findNemo(str) {
   const wordArray = str.split(' ');
-  const nemoIndex = wordArray.findIndex(element => element === 'Nemo');
+  const nemoIndex = wordArray.indexOf('Nemo');
 
   return nemoIndex !== -1 ? `I found Nemo at ${nemoIndex + 1}!` : "I can't find Nemo :("
 }
