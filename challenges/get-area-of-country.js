@@ -14,7 +14,9 @@
 // Round the result to two decimal places.
 
 function areaOfCountry(name, area) {
+  const areaPercentange = (area / 148940000 * 100).toFixed(2);
 
+  return `${name} is ${areaPercentange}% of the total world's landmass`
 }
 
 module.exports = areaOfCountry
