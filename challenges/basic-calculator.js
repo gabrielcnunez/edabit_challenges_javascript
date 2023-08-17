@@ -14,11 +14,7 @@
 // If the input tries to divide by 0, return: "Can't divide by 0!"
 
 function calculator(num1, operator, num2) {
-  if (operator === '/' && num2 === 0) {
-    return "Can't divide by 0!";
-  } else {
-    return eval(num1 + operator + num2);
-  }
+  return operator === '/' && num2 === 0 ? "Can't divide by 0!" : eval(num1 + operator + num2);
 }
 
 module.exports = calculator;
