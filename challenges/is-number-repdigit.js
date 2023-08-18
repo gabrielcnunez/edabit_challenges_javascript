@@ -18,9 +18,14 @@ function isRepdigit(num) {
     return false;
   }
 
-  const numStr = num.toString()
+  // const numStr = num.toString()
 
-  return [...numStr.matchAll(numStr[0])].length == numStr.length
+  // return [...numStr.matchAll(numStr[0])].length == numStr.length
+
+  const digitArray = Array.from(String(num), Number);
+  const repeatingNum = (currentValue) => currentValue === digitArray[0];
+
+  return digitArray.every(repeatingNum);
 }
 
 module.exports = isRepdigit
