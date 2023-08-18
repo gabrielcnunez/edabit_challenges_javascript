@@ -14,7 +14,13 @@
 // Check the Resources tab for more info on repdigits.
 
 function isRepdigit(num) {
+  if (num < 0) {
+    return false;
+  }
 
+  const numStr = num.toString()
+
+  return [...numStr.matchAll(numStr[0])].length == numStr.length
 }
 
 module.exports = isRepdigit
