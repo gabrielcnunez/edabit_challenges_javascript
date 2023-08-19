@@ -20,7 +20,9 @@
 // Return false if the arguments are empty or not provided.
 
 function marathonDistance(arr) {
-
+  const absDistance = arr.reduce((sum, number) => sum + Math.abs(number), 0);
+ 
+  return absDistance === 25;
 }
 
 module.exports = marathonDistance;
