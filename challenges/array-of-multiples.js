@@ -13,13 +13,14 @@
 // Notice that num is also included in the returned array.
 
 function arrayOfMultiples(num, length) {
-  let multiplesArray = [];
+  // let multiplesArray = [];
 
-  for (var i = 1; i < length + 1; i++) {
-    multiplesArray.push(num * i);
-  }
+  // for (var i = 1; i < length + 1; i++) {
+  //   multiplesArray.push(num * i);
+  // }
 
-  return multiplesArray;
+  // return multiplesArray;
+  return Array.from({ length }, (_, i) => num * (i + 1));
 }
 
 module.exports = arrayOfMultiples;
