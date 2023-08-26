@@ -13,7 +13,7 @@
 // All items in the array will be integers.
 
 function indexMultiplier(arr) {
-
+  return arr.reduce((sum, element, index) => sum + element * index, 0);
 }
 
 module.exports = indexMultiplier;
