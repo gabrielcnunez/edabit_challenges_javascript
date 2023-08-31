@@ -22,7 +22,9 @@
 // Make sure to remove characters from the end of the string.
 
 function decimator(str) {
-  
+  const theLuckyOnes = str.length - Math.ceil(str.length / 10)
+
+  return str.slice(0, theLuckyOnes)
 }
 
 module.exports = decimator
