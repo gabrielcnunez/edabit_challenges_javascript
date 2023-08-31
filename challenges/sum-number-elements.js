@@ -14,7 +14,15 @@
 // Check the Resources tab for help.
 
 function numbersSum(arr) {
+  let numsArr = [];
 
+  for (const e of arr) {
+    if (typeof e === 'number') {
+      numsArr.push(e);
+    }
+  }
+
+  return numsArr.reduce((a, b) => a + b, 0);
 }
 
 module.exports = numbersSum;
