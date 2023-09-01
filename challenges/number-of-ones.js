@@ -14,15 +14,10 @@
 
 function countOnes(int) {
   const binaryStr = int.toString(2);
-  let onesCount = 0;
 
-  for (let i = 0; i < binaryStr.length; i++) {
-    if (binaryStr[i] === '1') {
-      onesCount += 1;
-    }
-  }
+  const onesCount = (binaryStr.match(/1/g) || []).length;
 
-  return onesCount
+  return onesCount;
 }
 
 module.exports = countOnes;
