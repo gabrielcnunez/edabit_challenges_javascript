@@ -34,7 +34,15 @@
 // There will be at least one layer for each rug.
 
 function countLayers(arr) {
+  let layers = 1;
 
+  for (let i = 0; i < .5 * arr.length - .5; i++) {
+    if (arr[i] !== arr[i + 1]) {
+      layers += 1;
+    }
+  }
+
+  return layers;
 }
 
 module.exports = countLayers;
