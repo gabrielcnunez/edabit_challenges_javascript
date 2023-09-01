@@ -17,7 +17,9 @@
 
 function sevenBoom(arr) {
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i].toString().includes('7')) {
+    const numStr = arr[i].toString();
+
+    if (numStr.includes('7')) {
       return 'Boom!';
     }
   }
