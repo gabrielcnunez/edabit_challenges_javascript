@@ -13,7 +13,16 @@
 // The input will always be a valid integer (number).
 
 function countOnes(int) {
+  const binaryStr = int.toString(2);
+  let onesCount = 0;
 
+  for (let i = 0; i < binaryStr.length; i++) {
+    if (binaryStr[i] === '1') {
+      onesCount += 1;
+    }
+  }
+
+  return onesCount
 }
 
 module.exports = countOnes;
