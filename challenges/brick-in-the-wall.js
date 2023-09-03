@@ -16,7 +16,18 @@
 // You can't put a brick in at a non-orthogonal angle.
 
 function doesBrickFit(a,b,c, w,h) {
+  let brickDim = [a, b, c];
+  const widthFit = brickDim.indexOf(w);
+  
+  if (widthFit > -1) {
+    brickDim.splice(widthFit, 1);
+  } else {
+    return false;
+  }
 
+  const heightFit = brickDim.indexOf(h);
+
+  return heightFit > -1 ? true : false;
 }
 
 module.exports = doesBrickFit;
