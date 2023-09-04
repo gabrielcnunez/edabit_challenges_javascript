@@ -23,7 +23,10 @@
 // N/A
 
 function oddishOrEvenish(num) {
+  const numArr = Array.from(num.toString()).map(Number);
+  const sumNum = numArr.reduce((a, b) => a + b, 0);
 
+  return sumNum % 2 === 0 ? 'Evenish' : 'Oddish';
 }
 
-module.exports = oddishOrEvenish
+module.exports = oddishOrEvenish;
