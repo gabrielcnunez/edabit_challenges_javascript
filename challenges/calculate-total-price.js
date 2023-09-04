@@ -43,11 +43,22 @@
 // Notes
 // There might be a floating point precision problem in here...
 
-function getTotalPrice(arr) {
-  const subTotals = arr.map(element => element.quantity * element.price);
-  const grandTotal = subTotals.reduce((a, b) => a + b, 0);
+// function getTotalPrice(arr) {
+//   const subTotals = arr.map(element => element.quantity * element.price);
+//   const grandTotal = subTotals.reduce((a, b) => a + b, 0);
 
-  return parseFloat(grandTotal.toFixed(2));
+//   return parseFloat(grandTotal.toFixed(2));
+// }
+
+function getTotalPrice(groceries) {
+  let totalPrice = 0;
+
+  for (const item of groceries) {
+    const itemPrice = item.quantity * item.price;
+    totalPrice += itemPrice;
+  }
+
+  return parseFloat(totalPrice.toFixed(2));
 }
 
 module.exports = getTotalPrice;
