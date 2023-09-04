@@ -17,7 +17,19 @@
 // 0 counts as neither a positive nor a negative value.
 
 function isPositiveDominant(arr) {
+  const distinctValues = [...new Set(arr)];
+  let posValues = 0;
+  let negValues = 0;
 
+  for (const value of distinctValues) {
+    if (value > 0) {
+      posValues += 1;
+    } else if (value < 0) {
+      negValues += 1;
+    }
+  }
+  
+  return posValues > negValues;
 }
 
 module.exports = isPositiveDominant;
