@@ -44,7 +44,10 @@
 // There might be a floating point precision problem in here...
 
 function getTotalPrice(arr) {
+  const subTotals = arr.map(element => element.quantity * element.price);
+  const grandTotal = subTotals.reduce((a, b) => a + b, 0);
 
+  return parseFloat(grandTotal.toFixed(2));
 }
 
 module.exports = getTotalPrice;
