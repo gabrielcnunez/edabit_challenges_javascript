@@ -15,8 +15,17 @@
 // Don't overthink this one.
 // Input may include the number zero.
 
-function combinations(items) {
-  
+function combinations(...items) {
+  itemsArray = [...items];
+  let totalCombos = itemsArray[0];
+
+  for (let i = 1; i < itemsArray.length; i++) {
+    if (itemsArray[i] !== 0) {
+      totalCombos *= itemsArray[i];
+    }
+  }
+
+  return totalCombos;
 }
 
 module.exports = combinations;
