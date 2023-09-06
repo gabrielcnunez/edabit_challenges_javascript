@@ -1,5 +1,5 @@
 // Combinations
-// Create a function that takes a variable number of arguments, 
+// Create a function that takes a variable number of items, 
 // each argument representing the number of items in a group. 
 // The function should return the number of permutations (combinations) 
 // of choices you would have if you selected one item from each group.
@@ -16,16 +16,15 @@
 // Input may include the number zero.
 
 function combinations(...items) {
-  itemsArray = [...items];
-  let totalCombos = itemsArray[0];
+  let result = 1;
 
-  for (let i = 1; i < itemsArray.length; i++) {
-    if (itemsArray[i] !== 0) {
-      totalCombos *= itemsArray[i];
+  for (let i = 0; i < items.length; i++) {
+    if (items[i] !== 0) {
+      result *= items[i];
     }
   }
 
-  return totalCombos;
+  return result;
 }
 
 module.exports = combinations;
