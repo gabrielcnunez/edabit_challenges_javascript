@@ -14,7 +14,13 @@
 // Think about the properties of a pandigital number when all duplicates are removed.
 
 function isPandigital(num) {
+  const digitsArray = Array.from(String(num));
+  
+  const uniqueDigitsArray = [...new Set(digitsArray.map(Number))];
 
+  const sortedNums = uniqueDigitsArray.sort((a, b) => a - b).join('');
+
+  return sortedNums == 0123456789;
 }
 
 module.exports = isPandigital;
