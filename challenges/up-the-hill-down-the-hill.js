@@ -17,11 +17,15 @@
 // The solution is not dividing the sum of the speeds by 2.
 // Check the Resources tab if your stuck.
 
-function aveSpd(upTime, upSpd, downSpd) {
-  const halfway = (upTime / 60) * upSpd;
-  const downTime = (halfway / downSpd) * 60;
+// function aveSpd(upTime, upSpd, downSpd) {
+//   const halfway = (upTime / 60) * upSpd;
+//   const downTime = (halfway / downSpd) * 60;
 
-  return halfway * 2 / (upTime + downTime) * 60;
+//   return halfway * 2 / (upTime + downTime) * 60;
+// }
+
+function aveSpd(uphillTime, uphillRate, downhillRate) {
+  return (2 * uphillRate * downhillRate) / (uphillRate + downhillRate);
 }
 
 module.exports = aveSpd;
