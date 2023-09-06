@@ -18,7 +18,10 @@
 // Check the Resources tab if your stuck.
 
 function aveSpd(upTime, upSpd, downSpd) {
+  const halfway = (upTime / 60) * upSpd;
+  const downTime = (halfway / downSpd) * 60;
 
+  return halfway * 2 / (upTime + downTime) * 60;
 }
 
 module.exports = aveSpd;
