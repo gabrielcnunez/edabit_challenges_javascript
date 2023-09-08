@@ -27,7 +27,17 @@
 // For better understanding try printing out the result.
 
 function histogram(arr, char) {
+  let gramString = ''
 
+  for (const [index, value] of arr.entries()) {
+    if (index !== arr.length - 1) {
+      gramString += char.repeat(value) + '\n'
+    } else {
+      gramString += char.repeat(value)
+    }
+  }
+
+  return gramString
 }
 
 module.exports = histogram
