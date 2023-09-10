@@ -18,7 +18,7 @@
 // 1 disc can be changed per move.
 
 function towerHanoi(num) {
-
+  return 2 ** num - 1;
 }
 
 module.exports = towerHanoi;
