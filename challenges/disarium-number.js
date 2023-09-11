@@ -23,7 +23,10 @@
 // A recursive version of this challenge can be found via this link.
 
 function isDisarium(num) {
+  const digitsArr = Array.from(String(num), Number);
+  const disariumSum = digitsArr.reduce((sum, element, index) => sum + element ** (index + 1), 0);
 
+  return disariumSum === num;
 }
 
 module.exports = isDisarium;
