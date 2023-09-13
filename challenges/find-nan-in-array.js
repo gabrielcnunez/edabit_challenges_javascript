@@ -14,7 +14,7 @@
 // NaN will occur in the input array only once.
 
 function findNaN(arr) {
-
+  return arr.findIndex(Number.isNaN);
 }
 
 module.exports = findNaN;
