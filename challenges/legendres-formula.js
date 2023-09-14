@@ -35,17 +35,15 @@
 // p and n will be positive integers.
 
 function legendre(p, n) {
-  if (p > n) return 0;
-
-  let exponent = 0;
+  let result = 0;
   let denominator = p;
 
-  while (denominator <= n) {
-    exponent += Math.floor(n / denominator);
+  while (n >= denominator) {
+    result += Math.floor(n / denominator);
     denominator *= p;
   }
 
-  return exponent;
+  return result;
 }
 
 module.exports = legendre;
