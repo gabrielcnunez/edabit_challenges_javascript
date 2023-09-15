@@ -27,7 +27,16 @@
 // Return a number in seconds.
 
 function colorPatternTimes(arr) {
+  let seconds = 0
 
+  for (const [i, v] of arr.entries()) {
+    if (arr[i + 1] && v !== arr[i + 1]) {
+      seconds++
+    }
+    seconds += 2
+  }
+
+  return seconds
 }
 
 module.exports = colorPatternTimes
