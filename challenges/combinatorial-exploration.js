@@ -17,8 +17,16 @@
 // Notes
 // This challenge requires some understanding of combinatorics.
 
-function noPermsDigits(num) {
+function noPermsDigits(n) {
+  if (n <= 1) {
+    return 1;
+  }
 
+  const pi = Math.PI;
+  const e = Math.E;
+  const digitCount = Math.floor(0.5 * Math.log10(2 * pi * n) + n * Math.log10(n / e) + 1);
+
+  return digitCount;
 }
 
 module.exports = noPermsDigits;
