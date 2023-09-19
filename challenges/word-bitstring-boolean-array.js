@@ -22,7 +22,11 @@
 // All input strings are in lowercase letters of the English alphabet.
 
 function toBoolArray(str) {
+  const splitString = str.split('')
+  
+  const boolArray = splitString.map((char) => (char.charCodeAt() - 96) % 2 !== 0)
 
+  return boolArray
 }
 
 module.exports = toBoolArray
