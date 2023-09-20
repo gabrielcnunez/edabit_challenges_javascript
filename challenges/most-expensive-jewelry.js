@@ -23,15 +23,14 @@
 // There will always be only one highest priced item (i.e. there will not be two items with the joint highest value).
 
 function mostExpensive(obj) {
-  let highestJewel = null;
+  let mostExpensiveJewelry = '';
   let highestPrice = 0;
 
-  for(const key in obj) {
-    const value = obj[key];
-    if (value > highestPrice) (highestJewel = key, highestPrice = value);
+  for (const key in obj) {
+    if (obj[key] > highestPrice) (mostExpensiveJewelry = key, highestPrice = obj[key]);
   }
 
-  return `The most expensive one is the ${highestJewel}`;
+  return `The most expensive one is the ${mostExpensiveJewelry}`;
 }
 
 module.exports = mostExpensive;
