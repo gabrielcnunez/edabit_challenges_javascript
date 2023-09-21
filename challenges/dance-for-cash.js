@@ -25,7 +25,16 @@
 const MOVES = ["Shimmy", "Shake", "Pirouette", "Slide", "Box Step", "Headspin", "Dosado", "Pop", "Lock", "Arabesque"];
 
 function danceConvert(pin) {
-	
+  if (pin.length !== 4 || (/[^0-9]/).test(pin)) return 'Invalid input.'
+  const charArray = pin.split('')
+	let danceMoves = []
+
+  for (const [i, v] of charArray.entries()) {
+    const movesIndex = (parseInt(v) + i) % 10
+    danceMoves.push(MOVES[movesIndex])
+  }
+
+  return danceMoves
 }
 
 module.exports = danceConvert
