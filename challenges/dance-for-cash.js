@@ -26,13 +26,13 @@ const MOVES = ["Shimmy", "Shake", "Pirouette", "Slide", "Box Step", "Headspin", 
 
 function danceConvert(pin) {
   if (pin.length !== 4 || (/[^0-9]/).test(pin)) return 'Invalid input.'
-  const charArray = pin.split('')
-	let danceMoves = []
 
-  for (const [i, v] of charArray.entries()) {
-    const movesIndex = (parseInt(v) + i) % 10
-    danceMoves.push(MOVES[movesIndex])
-  }
+  const charArray = pin.split('')
+
+	const danceMoves = charArray.map((char, index) => {
+    const movesIndex = (parseInt(char) + index) % 10
+    return MOVES[movesIndex]
+  })
 
   return danceMoves
 }
