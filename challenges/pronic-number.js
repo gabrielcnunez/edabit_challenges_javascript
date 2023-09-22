@@ -23,7 +23,11 @@
 // A recursive version of this challenge can be found via this link.
 
 function isHeteromecic(num) {
+  for (let i = 0; i <= num; i++) {
+    if (i * (i + 1) === num) return true
+  }
 
+  return false
 }
 
 module.exports = isHeteromecic
