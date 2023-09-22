@@ -24,10 +24,13 @@
 
 function isHeteromecic(num) {
   for (let i = 0; i <= num; i++) {
-    if (i * (i + 1) === num) return true
+    const product = i * (i + 1)
+
+    if (product === num) return true;
+    if (product > num) break;
   }
 
-  return false
+  return false;
 }
 
-module.exports = isHeteromecic
+module.exports = isHeteromecic;
