@@ -17,7 +17,13 @@
 // The object should be in the same order as in the input array.
 
 function getFrequencies(arr) {
+  const frequencyObject = {}
 
+  for (element of arr) {
+    frequencyObject[element] ? frequencyObject[element]++ : frequencyObject[element] = 1
+  }
+
+  return frequencyObject
 }
 
 module.exports = getFrequencies
