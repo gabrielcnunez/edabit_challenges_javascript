@@ -13,7 +13,9 @@
 // Notes
 
 function insertWhiteSpace(str) {
+  const regex = /([a-z])([A-Z])/g;
 
+  return str.replace(regex, '$1 $2');
 }
 
-module.exports = insertWhiteSpace
+module.exports = insertWhiteSpace;
