@@ -32,8 +32,6 @@ function textToNumberBinary(str) {
     }
   }
 
-  if (binaryArray.length < 8) return ''
-
   while (binaryArray.length % 8 !== 0) {
     binaryArray.pop()
   }
