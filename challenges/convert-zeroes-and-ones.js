@@ -21,24 +21,24 @@
 // You must return the result as a string.
 
 function textToNumberBinary(str) {
-  const binaryArray = str.toLowerCase().split(' ')
-  let convertedArray = []
+  const textArray = str.toLowerCase().split(' ')
+  let binaryArray = []
 
-  for (const element of binaryArray) {
+  for (const element of textArray) {
     if (element === 'zero') {
-      convertedArray.push(0)
+      binaryArray.push(0)
     } else if (element === 'one') {
-      convertedArray.push(1)
+      binaryArray.push(1)
     }
   }
 
-  if (convertedArray.length < 8) return ''
+  if (binaryArray.length < 8) return ''
 
-  while (convertedArray.length % 8 !== 0) {
-    convertedArray.pop()
+  while (binaryArray.length % 8 !== 0) {
+    binaryArray.pop()
   }
 
-  return convertedArray.join('')
+  return binaryArray.join('')
 }
 
 module.exports = textToNumberBinary
