@@ -15,19 +15,17 @@
 
 function lcm(a, b) {
   const sortedNumsArray = [a, b].sort((a, b) => a - b)
-
-  if (sortedNumsArray[1] % sortedNumsArray[0] === 0) return sortedNumsArray[1]
   
-  let possibleGcd = null
+  let gcd = null
 
-  for (let i = sortedNumsArray[0] - 1; i > 0; i--) {
+  for (let i = sortedNumsArray[0]; i > 0; i--) {
     if (sortedNumsArray[0] % i === 0 && sortedNumsArray[1] % i === 0) {
-      possibleGcd = i
+      gcd = i
       break
     }
   }
 
-  return possibleGcd == null ? sortedNumsArray[0] * sortedNumsArray[1] : (sortedNumsArray[0] * sortedNumsArray[1]) / possibleGcd
+  return a * b / gcd
 }
 
 module.exports = lcm
