@@ -20,7 +20,7 @@ function lcm(a, b) {
   
   let possibleGcd = null
 
-  for (let i = 2; i < sortedNumsArray[0]; i++) {
+  for (let i = sortedNumsArray[0] - 1; i > 0; i--) {
     if (sortedNumsArray[0] % i === 0 && sortedNumsArray[1] % i === 0) {
       possibleGcd = i
       break
