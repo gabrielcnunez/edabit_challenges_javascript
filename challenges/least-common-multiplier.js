@@ -14,7 +14,20 @@
 // LCM stands for least common multiple, the smallest multiple of both integers.
 
 function lcm(a, b) {
+  const sortedNumsArray = [a, b].sort((a, b) => a - b)
 
+  if (sortedNumsArray[1] % sortedNumsArray[0] === 0) return sortedNumsArray[1]
+  
+  let possibleGcd = null
+
+  for (let i = 2; i < sortedNumsArray[0]; i++) {
+    if (sortedNumsArray[0] % i === 0 && sortedNumsArray[1] % i === 0) {
+      possibleGcd = i
+      break
+    }
+  }
+
+  return possibleGcd == null ? sortedNumsArray[0] * sortedNumsArray[1] : (sortedNumsArray[0] * sortedNumsArray[1]) / possibleGcd
 }
 
 module.exports = lcm
