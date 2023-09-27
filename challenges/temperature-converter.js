@@ -14,14 +14,14 @@
 // For the formulae to convert back and forth, check the Resources tab.
 
 function convert(deg) {
-  const intOfNumbers = parseFloat(deg)
+  const degreesNumber = parseFloat(deg)
 
   if (deg.endsWith('°F')) {
-    const celsConversion = Math.round((intOfNumbers - 32) / 1.8)
+    const celsConversion = Math.round((degreesNumber - 32) / 1.8)
     
     return `${celsConversion}°C`
   } else if (deg.endsWith('°C')) {
-    const fahrConversion = Math.round(intOfNumbers * 1.8 + 32)
+    const fahrConversion = Math.round(degreesNumber * 1.8 + 32)
 
     return `${fahrConversion}°F`
   } else {
