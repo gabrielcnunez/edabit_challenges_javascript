@@ -14,7 +14,20 @@
 // For the formulae to convert back and forth, check the Resources tab.
 
 function convert(deg) {
+  const numbers = deg.match(/(-?\d+)/)
+  const intOfNumbers = parseInt(numbers[0], 10)
 
+  if (deg.includes('F')) {
+    const celsConversion = Math.round((intOfNumbers - 32) / 1.8)
+    
+    return `${celsConversion}°C`
+  } else if (deg.includes('C')) {
+    const fahrConversion = Math.round(intOfNumbers * 1.8 + 32)
+
+    return `${fahrConversion}°F`
+  } else {
+    return 'Error'
+  }
 }
 
 module.exports = convert
