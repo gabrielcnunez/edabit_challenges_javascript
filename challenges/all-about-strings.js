@@ -23,15 +23,11 @@
 function allAboutStrings(str) {
   const infoArray = [str.length, str[0], str[str.length - 1]]
   const strMiddle = Math.ceil(str.length / 2) - 1
-  let secondOccurence = null
+  let secondOccurence = str.indexOf(str[1], 2)
 
   str.length % 2 === 0 ? infoArray.push(str.substr(strMiddle, 2)) : infoArray.push(str.substr(strMiddle, 1))
 
-  for (let i = 2; i <= str.length; i++) {
-    if (str[i] === str[1]) secondOccurence = i
-  }
-
-  secondOccurence !== null ? infoArray.push(`@ index ${secondOccurence}`) : infoArray.push('not found')
+  secondOccurence !== -1 ? infoArray.push(`@ index ${secondOccurence}`) : infoArray.push('not found')
   
   return infoArray
 }
