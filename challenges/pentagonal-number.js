@@ -15,13 +15,21 @@
 
 // pentagonal(3) ➞ 16
 
+// pentagonal(4) ➞ 31
+
+// pentagonal(5) ➞ 51
+
+// pentagonal(6) ➞ 76
+
+// pentagonal(7) ➞ 106
+
 // pentagonal(8) ➞ 141
 
 // Notes
 // N/A
 
 function pentagonal(num) {
-
+  return 1 + (num - 1) * num * 5 / 2
 }
 
 module.exports = pentagonal
