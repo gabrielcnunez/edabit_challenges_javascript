@@ -41,7 +41,11 @@
 // All given cases will have valid parameters for water and fert, you have to only check that temp is in the "safe" range (20°C|30°C).
 
 function plant(seed, water, fert, temp) {
+  let flower = ''
 
+  temp >= 20 && temp <= 30 ? flower += ('-'.repeat(water) + seed.repeat(fert)).repeat(water) : flower += '-'.repeat(water ** 2) + seed
+
+  return flower
 }
 
 module.exports = plant
