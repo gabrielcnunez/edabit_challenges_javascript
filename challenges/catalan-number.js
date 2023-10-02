@@ -18,21 +18,32 @@
 // Notes
 // Inputs are zero and positive integers.
 
+// function getCatalanNumber(num) {
+//   function factorialize(n) {
+//     let result = n
+
+//     if (n === 0 || n === 1) return 1
+
+//     while (n > 1) {
+//       n--
+//       result *= n
+//     }
+
+//     return result
+//   }
+
+//   return Math.round(factorialize(2 * num) / (factorialize(num + 1) * factorialize(num)))
+// }
+
 function getCatalanNumber(num) {
-  function factorialize(n) {
-    let result = n
+  if (num <= 1) return 1
 
-    if (n === 0 || n === 1) return 1
-
-    while (n > 1) {
-      n--
-      result *= n
-    }
-
-    return result
+  let catalan = 1
+  for (let i = 0; i < num; i++) {
+    catalan = (catalan * 2 * (2 * i + 1)) / (i + 2)
   }
 
-  return Math.round(factorialize(2 * num) / (factorialize(num + 1) * factorialize(num)))
+  return catalan
 }
 
 module.exports = getCatalanNumber
