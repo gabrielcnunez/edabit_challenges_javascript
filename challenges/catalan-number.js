@@ -19,7 +19,20 @@
 // Inputs are zero and positive integers.
 
 function getCatalanNumber(num) {
+  function factorialize(n) {
+    let result = n
 
+    if (n === 0 || n === 1) return 1
+
+    while (n > 1) {
+      n--
+      result *= n
+    }
+
+    return result
+  }
+
+  return Math.round(factorialize(2 * num) / (factorialize(num + 1) * factorialize(num)))
 }
 
 module.exports = getCatalanNumber
