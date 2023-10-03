@@ -17,11 +17,11 @@
 // An empty array should return an empty array: []
 
 function movingPartition(arr) {
-  let partitionArray = []
+  const partitionArray = []
 
-  for (let i = 0; i < arr.length - 1; i++) {
-    let leftSidePartition = arr.slice(0, i + 1)
-    let rightSidePartition = arr.slice(i - arr.length + 1)
+  for (let i = 1; i < arr.length; i++) {
+    const leftSidePartition = arr.slice(0, i)
+    const rightSidePartition = arr.slice(i)
 
     partitionArray.push([leftSidePartition, rightSidePartition])
   }
