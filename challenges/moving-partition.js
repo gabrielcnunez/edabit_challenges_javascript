@@ -17,7 +17,16 @@
 // An empty array should return an empty array: []
 
 function movingPartition(arr) {
+  let partitionArray = []
 
+  for (let i = 0; i < arr.length - 1; i++) {
+    let leftSidePartition = arr.slice(0, i + 1)
+    let rightSidePartition = arr.slice(i - arr.length + 1)
+
+    partitionArray.push([leftSidePartition, rightSidePartition])
+  }
+
+  return partitionArray
 }
 
 module.exports = movingPartition
