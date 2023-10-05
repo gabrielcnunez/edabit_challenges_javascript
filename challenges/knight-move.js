@@ -36,8 +36,8 @@ function knightMove(startPos) {
     const newCol = letter.charCodeAt(0) - 'A'.charCodeAt(0) + move.col
 
     if (newRow >= 1 && newRow <= 8 && newCol >= 0 && newCol <= 7) {
-      const newLetter = String.fromCharCode('A'.charCodeAt(0) + newCol);
-      possibleMoves.push(`${newLetter}${newRow}`);
+      const newLetter = String.fromCharCode('A'.charCodeAt(0) + newCol)
+      possibleMoves.push(`${newLetter}${newRow}`)
     }
   }
 
