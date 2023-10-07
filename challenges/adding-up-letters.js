@@ -32,7 +32,13 @@
 // All letters given will be lowercase.
 
 function addLetters(arr) {
+  if (arr.length === 0) return 'z'
+  if (arr.length === 1) return arr[0]
 
+  const letterValues = arr.map((ltr) => ltr.charCodeAt(0) - 96)
+  const valueSum = letterValues.reduce((a, b) => a + b, 0)
+  
+  return valueSum <= 26 ? String.fromCharCode(valueSum + 96) : String.fromCharCode((valueSum % 26) + 96)
 }
 
 module.exports = addLetters
