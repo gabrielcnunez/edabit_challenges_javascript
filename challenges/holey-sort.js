@@ -19,7 +19,21 @@
 // fonts, it will only have one hole for the purposes of this challenge.
 
 function holeySort(arr) {
+  const holeCount = num => {
+    const holeMap = { 4: 1, 6: 1, 8: 2, 9: 1, 0: 1 };
+    return num.toString().split('').reduce((count, digit) => count + (holeMap[digit] || 0), 0);
+  };
 
+  return arr.sort((a, b) => {
+    const holesA = holeCount(a);
+    const holesB = holeCount(b);
+
+    if (holesA === holesB) {
+      return arr.indexOf(a) - arr.indexOf(b);
+    }
+
+    return holesA - holesB;
+  });
 }
 
 module.exports = holeySort
