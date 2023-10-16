@@ -1,0 +1,30 @@
+const assert = require('chai').assert
+const evenLast = require('../challenges/even-index-elements')
+
+describe('Even Index Elements in Array', function() {
+
+  it('takes array of integers, sums even indexed integers and multiplies sum by last integer', function() {
+    assert.equal(evenLast([]), 0)
+    assert.equal(evenLast([1, 3, 3, 1, 10]), 140)
+    assert.equal(evenLast([-11, 3, 3, 1, 10]), 20)
+    assert.equal(evenLast([1, 31, 3, 11, 0]), 0)
+    assert.equal(evenLast([1, 2, 3, 4, 5, 6, 8]), 136) 
+    assert.equal(evenLast([2, 3, 4, 5]), 30)
+    assert.equal(evenLast([2, 4, 6, 8, 9, 11]), 187)
+    assert.equal(evenLast([6, 5, 7, 2, 1]), 14)
+    assert.equal(evenLast([2, 2, 2, 2]), 8)
+    assert.equal(evenLast([5, 1, 2, 3, 4, 6, 7, 8, 4]), 88)
+    assert.equal(evenLast([2, 4, 3, 2, 3, 4, 4, 5]), 60)
+    assert.equal(evenLast([7, 23, 22, 6, 8, 2]), 74)
+    assert.equal(evenLast([33, 2, -22, 5, -6, 5]), 25)
+    assert.equal(evenLast([5, 6, 7, 3, 22, 2]), 68)
+    assert.equal(evenLast([3, 4, 5, 6, 7, 8]), 120)
+    assert.equal(evenLast([1, 4, 5, 6, 7, 2, 3]), 48)
+    assert.equal(evenLast([2, 7, 0, 3, 4, 8, 3]), 27)
+    assert.equal(evenLast([9, 3, -6, 2, 7, 8]), 80)
+    assert.equal(evenLast([7, 7, 7, 7, 1]), 15)
+    assert.equal(evenLast([6, 7, 8, 9, 10, 3, 4]), 112)
+    assert.equal(evenLast([9, 8, 7, 6, 5, 4, 3, 2]), 48)
+    assert.equal(evenLast([]), 0)
+  })
+})
