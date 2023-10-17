@@ -22,7 +22,12 @@
 // If the array is empty, return 0.
 
 function evenLast(arr) {
+  if (arr.length === 0) return 0
+  
+  const evenSum = arr.reduce((sum, element, index) => (index % 2 === 0 ? sum + element : sum), 0)
+  const multiplier = arr.pop()
 
+  return evenSum * multiplier
 }
 
 module.exports = evenLast
