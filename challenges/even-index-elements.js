@@ -23,9 +23,9 @@
 
 function evenLast(arr) {
   if (arr.length === 0) return 0
-  
+
   const evenSum = arr.reduce((sum, element, index) => (index % 2 === 0 ? sum + element : sum), 0)
-  const multiplier = arr.pop()
+  const multiplier = arr[arr.length - 1]
 
   return evenSum * multiplier
 }
