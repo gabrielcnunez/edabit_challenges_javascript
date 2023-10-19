@@ -27,7 +27,26 @@
 // Use zero-indexing for the arrays.
 
 function zipper(arr1, arr2) {
+  const arrayOneEnd = arr1[arr1.length - 1]
+  const arrayTwoEnd = arr2[arr2.length - 1]
 
+  if (arrayOneEnd !== arrayTwoEnd) return false
+
+  let firstArrayIndex = null
+  let intersection
+
+  for (let i = 1; i < arr1.length + 1; i++) {
+    if (arr1[arr1.length - i] !== arr2[arr2.length - i]) { 
+      firstArrayIndex = arr1.length - i
+      intersection = arr1.slice(firstArrayIndex + 1)
+      break
+    }
+  }
+
+  if (firstArrayIndex === null) return true
+  const secondArrayIndex = arr2.length - intersection.length - 1
+
+  return [firstArrayIndex, secondArrayIndex]
 }
 
 module.exports = zipper
