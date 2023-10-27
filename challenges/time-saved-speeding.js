@@ -26,7 +26,9 @@
 // The speed limit and average speed are both given in mi/hr
 
 function timeSaved(lim, avg, dist) {
+  const minutesSaved = (dist / lim - dist / avg) * 60
 
+  return minutesSaved.toFixed(1)
 }
 
 module.exports = timeSaved
